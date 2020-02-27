@@ -1,0 +1,27 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: open5gs-webui
+  namespace: open5gs  
+  labels:
+    epc-mode: webui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      epc-mode: webui
+  template:
+    metadata:
+      labels:
+        epc-mode: webui
+    spec:
+      containers:
+      - name: webui
+        #imagePullPolicy: Always
+        image: fjvicens/open5gs-webui:v0.1
+        command: ["node", "server/index.js"]
+        env:
+        - name: DB_URI
+          value: "mongodb://mongodb/open5gs?replicaSet=rs0"
+        - name: NODE_ENV
+          value: "production"
