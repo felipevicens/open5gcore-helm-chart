@@ -3,11 +3,11 @@ entries:
   open5gs:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-03-02T10:38:10.221092589+01:00
+    created: 2020-03-02T10:52:07.774935638+01:00
     description: A Helm chart for Kubernetes
-    digest: 0b26ac3b5f245c1ea15838190761496e66e43044d7d270c3b6383e8103c21926
+    digest: dba77e8c8c74cfaac0483bb9d8c1d19d528f1a997487d6fe36daadedd1dd8287
     name: open5gs
     urls:
     - https://felipevicens.github.io/open5gcore-helm-chart/open5gs-0.1.0.tgz
     version: 0.1.0
-generated: 2020-03-02T10:38:10.219477698+01:00
+generated: 2020-03-02T10:52:07.773670928+01:00
