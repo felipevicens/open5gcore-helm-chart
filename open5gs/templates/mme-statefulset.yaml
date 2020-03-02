@@ -29,7 +29,9 @@ spec:
             subPath: "mme.yaml"
           - name: open5gs-mme-diameter
             mountPath: /open5gs/config-map/diameter-mme.conf
-            subPath: "diameter-mme.conf"             
+            subPath: "diameter-mme.conf"
+          - name: open5gs-certs
+            mountPath: /etc/freeDiameter                     
       volumes:
         - name: open5gs-mme-config
           configMap:

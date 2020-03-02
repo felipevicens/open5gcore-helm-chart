@@ -27,7 +27,9 @@ spec:
             subPath: "pcrf.yaml"
           - name: open5gs-pcrf-diameter
             mountPath: /open5gs/config-map/diameter-pcrf.conf
-            subPath: "diameter-pcrf.conf"            
+            subPath: "diameter-pcrf.conf"
+          - name: open5gs-certs
+            mountPath: /etc/freeDiameter
       volumes:
         - name: open5gs-pcrf-config
           configMap:
@@ -35,3 +37,6 @@ spec:
         - name: open5gs-pcrf-diameter
           configMap:
             name: open5gs-pcrf-diameter
+        - name: open5gs-certs
+          configMap:
+            name: open5gs-certs

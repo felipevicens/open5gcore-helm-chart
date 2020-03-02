@@ -25,7 +25,12 @@ spec:
             - name: open5gs-sgw-config
               mountPath: /open5gs/config-map/sgw.yaml
               subPath: "sgw.yaml"
+          - name: open5gs-certs
+            mountPath: /etc/freeDiameter              
       volumes:
         - name: open5gs-sgw-config
           configMap:
             name: open5gs-sgw-config
+        - name: open5gs-certs
+          configMap:
+            name: open5gs-certs

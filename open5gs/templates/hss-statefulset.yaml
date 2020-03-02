@@ -28,7 +28,9 @@ spec:
             subPath: "hss.yaml"
           - name: open5gs-hss-diameter
             mountPath: /open5gs/config-map/diameter-hss.conf
-            subPath: "diameter-hss.conf"            
+            subPath: "diameter-hss.conf"    
+          - name: open5gs-certs
+            mountPath: /etc/freeDiameter        
       volumes:
       - name: open5gs-hss-config
         configMap:
@@ -36,3 +38,6 @@ spec:
       - name: open5gs-hss-diameter
         configMap:
           name: open5gs-hss-diameter
+      - name: open5gs-certs
+        configMap:
+          name: open5gs-certs

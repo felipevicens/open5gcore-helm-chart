@@ -1,0 +1,1464 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: open5gs-certs
+  namespace: {{ .Values.namespace }}
+data:
+ cacert.pem: |
+    -----BEGIN CERTIFICATE-----
+    MIICrDCCAhWgAwIBAgIUPoUbKXRTWQbrJYUIvyHdacCzw9cwDQYJKoZIhvcNAQEL
+    BQAwaDEXMBUGA1UEAwwOY2EubG9jYWxkb21haW4xCzAJBgNVBAYTAktPMQ4wDAYD
+    VQQIDAVTZW91bDEOMAwGA1UEBwwFTm93b24xEDAOBgNVBAoMB09wZW41R1MxDjAM
+    BgNVBAsMBVRlc3RzMB4XDTE5MTAyMDA2NDM1OFoXDTI5MTAxNzA2NDM1OFowaDEX
+    MBUGA1UEAwwOY2EubG9jYWxkb21haW4xCzAJBgNVBAYTAktPMQ4wDAYDVQQIDAVT
+    ZW91bDEOMAwGA1UEBwwFTm93b24xEDAOBgNVBAoMB09wZW41R1MxDjAMBgNVBAsM
+    BVRlc3RzMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2sDnWMj9oXpIw+vcm
+    9k/WidMyhSbImINLe9YgibFfozoxZt51Hvi/aAxlqyq7akGtvpL8yVZD6j7o74z7
+    6dlnUFDGC4M0WGEkcxqf5NIWe0QplCsXkEOMYHrXLQisAuUk81DNcsXlZr74bmDI
+    B0dUM0xJ2JrA5mx1LzTFHSesIwIDAQABo1MwUTAdBgNVHQ4EFgQUxTjcug/DKW49
+    mQeW0IcS/bhIzDcwHwYDVR0jBBgwFoAUxTjcug/DKW49mQeW0IcS/bhIzDcwDwYD
+    VR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOBgQB533IwIPOEE1w2RLBF9EKX
+    UxaDnUYW05t9eZFLsUtOLFiR84xhCawGEWNtaLvoJE42E17qEjnX4+KGOc6/sa6q
+    bLskf7BK7496dQrVY5DO9vdSpN1ep3j+1QKae23wYpjqt2UEU3QtIZpsDjUreYri
+    YLVacMQydGgizNQrY3iCvQ==
+    -----END CERTIFICATE-----
+ hss.cert.pem: |
+    Certificate:
+        Data:
+            Version: 3 (0x2)
+            Serial Number: 2 (0x2)
+            Signature Algorithm: sha256WithRSAEncryption
+            Issuer: CN=ca.localdomain, C=KO, ST=Seoul, L=Nowon, O=Open5GS, OU=Tests
+            Validity
+                Not Before: Oct 20 06:43:58 2019 GMT
+                Not After : Oct 17 06:43:58 2029 GMT
+            Subject: C=KO, ST=Seoul, O=Open5GS, OU=Tests, CN=hss.localdomain
+            Subject Public Key Info:
+                Public Key Algorithm: rsaEncryption
+                    RSA Public-Key: (1024 bit)
+                    Modulus:
+                        00:d3:e7:ba:6d:14:65:af:df:90:e5:4a:53:56:a1:
+                        f6:89:2e:cb:ee:ce:d6:73:9f:48:b6:96:78:67:a7:
+                        87:18:b8:ab:c3:0b:31:b3:02:92:48:ed:49:ac:40:
+                        c1:13:3b:13:58:50:cc:2e:59:44:e9:7e:31:02:14:
+                        f0:18:82:95:10:e4:37:b2:5d:14:19:1d:4b:8f:e9:
+                        1f:45:75:cf:0a:e0:8f:7b:e1:70:7b:ab:e4:af:2b:
+                        7c:4d:7f:00:d8:eb:cf:f3:96:ab:fc:04:4f:21:ad:
+                        d8:c4:94:05:02:ff:f3:12:48:88:9e:ce:cf:37:29:
+                        e0:28:39:37:62:05:ed:6d:5d
+                    Exponent: 65537 (0x10001)
+            X509v3 extensions:
+                X509v3 Basic Constraints: 
+                    CA:FALSE
+                Netscape Comment: 
+                    OpenSSL Generated Certificate
+                X509v3 Subject Key Identifier: 
+                    AB:0F:C4:B8:B7:6B:56:12:F5:D4:A3:29:B7:D9:5E:3C:DD:8B:79:DD
+                X509v3 Authority Key Identifier: 
+                    keyid:C5:38:DC:BA:0F:C3:29:6E:3D:99:07:96:D0:87:12:FD:B8:48:CC:37
+
+        Signature Algorithm: sha256WithRSAEncryption
+            43:95:ee:57:3f:4d:ad:bf:42:6c:48:ae:f8:2f:db:f6:cf:2e:
+            53:a2:3d:48:0a:48:a4:2c:2a:7c:fa:ec:b1:bd:06:a1:21:a5:
+            38:d8:00:05:81:25:91:51:e2:e6:a8:67:a8:c2:f6:5d:2a:f0:
+            40:fe:20:d3:82:2d:d9:8c:4c:61:b7:43:87:7f:fe:e4:a1:b6:
+            fd:54:35:13:4f:63:a5:6b:4a:01:aa:25:e9:80:27:eb:2e:a2:
+            18:e0:36:37:a5:57:09:67:ed:8f:1e:13:fd:b8:b2:d7:4e:cf:
+            93:d4:bf:75:02:38:4e:d4:4a:9c:35:fb:a8:0b:3a:ba:03:1a:
+            e6:9e
+    -----BEGIN CERTIFICATE-----
+    MIICsjCCAhugAwIBAgIBAjANBgkqhkiG9w0BAQsFADBoMRcwFQYDVQQDDA5jYS5s
+    b2NhbGRvbWFpbjELMAkGA1UEBhMCS08xDjAMBgNVBAgMBVNlb3VsMQ4wDAYDVQQH
+    DAVOb3dvbjEQMA4GA1UECgwHT3BlbjVHUzEOMAwGA1UECwwFVGVzdHMwHhcNMTkx
+    MDIwMDY0MzU4WhcNMjkxMDE3MDY0MzU4WjBZMQswCQYDVQQGEwJLTzEOMAwGA1UE
+    CAwFU2VvdWwxEDAOBgNVBAoMB09wZW41R1MxDjAMBgNVBAsMBVRlc3RzMRgwFgYD
+    VQQDDA9oc3MubG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGB
+    ANPnum0UZa/fkOVKU1ah9okuy+7O1nOfSLaWeGenhxi4q8MLMbMCkkjtSaxAwRM7
+    E1hQzC5ZROl+MQIU8BiClRDkN7JdFBkdS4/pH0V1zwrgj3vhcHur5K8rfE1/ANjr
+    z/OWq/wETyGt2MSUBQL/8xJIiJ7Ozzcp4Cg5N2IF7W1dAgMBAAGjezB5MAkGA1Ud
+    EwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmlj
+    YXRlMB0GA1UdDgQWBBSrD8S4t2tWEvXUoym32V483Yt53TAfBgNVHSMEGDAWgBTF
+    ONy6D8Mpbj2ZB5bQhxL9uEjMNzANBgkqhkiG9w0BAQsFAAOBgQBDle5XP02tv0Js
+    SK74L9v2zy5Toj1ICkikLCp8+uyxvQahIaU42AAFgSWRUeLmqGeowvZdKvBA/iDT
+    gi3ZjExht0OHf/7kobb9VDUTT2Ola0oBqiXpgCfrLqIY4DY3pVcJZ+2PHhP9uLLX
+    Ts+T1L91AjhO1EqcNfuoCzq6Axrmng==
+    -----END CERTIFICATE-----
+ hss.conf.in: |
+    # This is a sample configuration file for freeDiameter daemon.
+
+    # Most of the options can be omitted, as they default to reasonable values.
+    # Only TLS-related options must be configured properly in usual setups.
+
+    # It is possible to use "include" keyword to import additional files
+    # e.g.: include "/etc/freeDiameter.d/*.conf"
+    # This is exactly equivalent as copy & paste the content of the included file(s) 
+    # where the "include" keyword is found.
+
+
+    ##############################################################
+    ##  Peer identity and realm 
+
+    # The Diameter Identity of this daemon.
+    # This must be a valid FQDN that resolves to the local host.
+    # Default: hostname's FQDN
+    #Identity = "aaa.koganei.freediameter.net";
+    Identity = "hss.localdomain";
+
+    # The Diameter Realm of this daemon.
+    # Default: the domain part of Identity (after the first dot).
+    #Realm = "koganei.freediameter.net";
+    Realm = "localdomain";
+
+    ##############################################################
+    ##  Transport protocol configuration
+
+    # The port this peer is listening on for incoming connections (TCP and SCTP).
+    # Default: 3868. Use 0 to disable.
+    #Port = 3868;
+
+    # The port this peer is listening on for incoming TLS-protected connections (TCP and SCTP).
+    # See TLS_old_method for more information about TLS flavours.
+    # Note: we use TLS/SCTP instead of DTLS/SCTP at the moment. This will change in future version of freeDiameter.
+    # Default: 5868. Use 0 to disable.
+    #SecPort = 5868;
+
+    # Use RFC3588 method for TLS protection, where TLS is negociated after CER/CEA exchange is completed 
+    # on the unsecure connection. The alternative is RFC6733 mechanism, where TLS protects also the 
+    # CER/CEA exchange on a dedicated secure port.
+    # This parameter only affects outgoing connections. 
+    # The setting can be also defined per-peer (see Peers configuration section).
+    # Default: use RFC6733 method with separate port for TLS.
+    #TLS_old_method;
+
+    # Disable use of TCP protocol (only listen and connect over SCTP)
+    # Default : TCP enabled
+    #No_TCP;
+
+    # Disable use of SCTP protocol (only listen and connect over TCP)
+    # Default : SCTP enabled
+    #No_SCTP;
+    # This option is ignored if freeDiameter is compiled with DISABLE_SCTP option.
+
+    # Prefer TCP instead of SCTP for establishing new connections.
+    # This setting may be overwritten per peer in peer configuration blocs.
+    # Default : SCTP is attempted first.
+    #Prefer_TCP;
+
+    # Default number of streams per SCTP associations.
+    # This setting may be overwritten per peer basis.
+    # Default : 30 streams
+    #SCTP_streams = 30;
+
+    ##############################################################
+    ##  Endpoint configuration
+
+    # Disable use of IP addresses (only IPv6)
+    # Default : IP enabled
+    #No_IP;
+
+    # Disable use of IPv6 addresses (only IP)
+    # Default : IPv6 enabled
+    #No_IPv6;
+
+    # Specify local addresses the server must bind to
+    # Default : listen on all addresses available.
+    #ListenOn = "202.249.37.5";
+    #ListenOn = "2001:200:903:2::202:1";
+    #ListenOn = "fe80::21c:5ff:fe98:7d62%eth0";
+    ListenOn = "127.0.0.4";
+
+
+    ##############################################################
+    ##  Server configuration
+
+    # How many Diameter peers are allowed to be connecting at the same time ?
+    # This parameter limits the number of incoming connections from the time
+    # the connection is accepted until the first CER is received.
+    # Default: 5 unidentified clients in paralel.
+    #ThreadsPerServer = 5;
+
+    ##############################################################
+    ##  TLS Configuration
+
+    # TLS is managed by the GNUTLS library in the freeDiameter daemon.
+    # You may find more information about parameters and special behaviors
+    # in the relevant documentation.
+    # http://www.gnu.org/software/gnutls/manual/
+
+    # Credentials of the local peer
+    # The X509 certificate and private key file to use for the local peer.
+    # The files must contain PKCS-1 encoded RSA key, in PEM format.
+    # (These parameters are passed to gnutls_certificate_set_x509_key_file function)
+    # Default : NO DEFAULT
+    #TLS_Cred = "<x509 certif file.PEM>" , "<x509 private key file.PEM>";
+    #TLS_Cred = "/etc/ssl/certs/freeDiameter.pem", "/etc/ssl/private/freeDiameter.key";
+    TLS_Cred = "@sysconfdir@/freeDiameter/hss.cert.pem", "@sysconfdir@/freeDiameter/hss.key.pem";
+
+    # Certificate authority / trust anchors
+    # The file containing the list of trusted Certificate Authorities (PEM list)
+    # (This parameter is passed to gnutls_certificate_set_x509_trust_file function)
+    # The directive can appear several times to specify several files.
+    # Default : GNUTLS default behavior
+    #TLS_CA = "<file.PEM>";
+    TLS_CA = "@sysconfdir@/freeDiameter/cacert.pem";
+
+    # Certificate Revocation List file
+    # The information about revoked certificates.
+    # The file contains a list of trusted CRLs in PEM format. They should have been verified before. 
+    # (This parameter is passed to gnutls_certificate_set_x509_crl_file function)
+    # Note: openssl CRL format might have interoperability issue with GNUTLS format.
+    # Default : GNUTLS default behavior
+    #TLS_CRL = "<file.PEM>";
+
+    # GNU TLS Priority string
+    # This string allows to configure the behavior of GNUTLS key exchanges 
+    # algorithms. See gnutls_priority_init function documentation for information.
+    # You should also refer to the Diameter required TLS support here:
+    #   http://tools.ietf.org/html/rfc6733#section-13.1
+    # Default : "NORMAL"
+    # Example: TLS_Prio = "NONE:+VERS-TLS1.1:+AES-128-CBC:+RSA:+SHA1:+COMP-NULL";
+    #TLS_Prio = "NORMAL";
+
+    # Diffie-Hellman parameters size
+    # Set the number of bits for generated DH parameters
+    # Valid value should be 768, 1024, 2048, 3072 or 4096.
+    # (This parameter is passed to gnutls_dh_params_generate2 function, 
+    # it usually should match RSA key size)
+    # Default : 1024
+    #TLS_DH_Bits = 1024;
+
+    # Alternatively, you can specify a file to load the PKCS#3 encoded
+    # DH parameters directly from. This accelerates the daemon start 
+    # but is slightly less secure. If this file is provided, the
+    # TLS_DH_Bits parameters has no effect.
+    # Default : no default.
+    #TLS_DH_File = "<file.PEM>";
+
+
+    ##############################################################
+    ##  Timers configuration
+
+    # The Tc timer of this peer.
+    # It is the delay before a new attempt is made to reconnect a disconnected peer.
+    # The value is expressed in seconds. The recommended value is 30 seconds.
+    # Default: 30
+    #TcTimer = 30;
+
+    # The Tw timer of this peer.
+    # It is the delay before a watchdog message is sent, as described in RFC 3539.
+    # The value is expressed in seconds. The default value is 30 seconds. Value must
+    # be greater or equal to 6 seconds. See details in the RFC.
+    # Default: 30
+    #TwTimer = 30;
+
+    ##############################################################
+    ##  Applications configuration
+
+    # Disable the relaying of Diameter messages?
+    # For messages not handled locally, the default behavior is to forward the
+    # message to another peer if any is available, according to the routing 
+    # algorithms. In addition the "0xffffff" application is advertised in CER/CEA 
+    # exchanges.
+    # Default: Relaying is enabled.
+    #NoRelay;
+
+    # Number of server threads that can handle incoming messages at the same time.
+    # Default: 4
+    #AppServThreads = 4;
+
+    # Other applications are configured by loaded extensions.
+
+    ##############################################################
+    ##  Extensions configuration
+
+    #  The freeDiameter framework merely provides support for
+    # Diameter Base Protocol. The specific application behaviors,
+    # as well as advanced functions, are provided
+    # by loadable extensions (plug-ins).
+    #  These extensions may in addition receive the name of a 
+    # configuration file, the format of which is extension-specific.
+    #
+    # Format:
+    #LoadExtension = "/path/to/extension" [ : "/optional/configuration/file" ] ;
+    #
+    # Examples:
+    #LoadExtension = "extensions/sample.fdx";
+    #LoadExtension = "extensions/sample.fdx":"conf/sample.conf";
+
+    # Extensions are named as follow:
+    # dict_* for extensions that add content to the dictionary definitions.
+    # dbg_*  for extensions useful only to retrieve more information on the framework execution.
+    # acl_*  : Access control list, to control which peers are allowed to connect.
+    # rt_*   : routing extensions that impact how messages are forwarded to other peers.
+    # app_*  : applications, these extensions usually register callbacks to handle specific messages.
+    # test_* : dummy extensions that are useful only in testing environments.
+
+
+    # The dbg_msg_dump.fdx extension allows you to tweak the way freeDiameter displays some
+    # information about some events. This extension does not actually use a configuration file
+    # but receives directly a parameter in the string passed to the extension. Here are some examples:
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x1111"; # Removes all default hooks, very quiet even in case of errors.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x2222"; # Display all events with few details.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x0080"; # Dump complete information about sent and received messages.
+    # The four digits respectively control: connections, routing decisions, sent/received messages, errors.
+    # The values for each digit are:
+    #  0 - default - keep the default behavior
+    #  1 - quiet   - remove any specific log
+    #  2 - compact - display only a summary of the information
+    #  4 - full    - display the complete information on a single long line
+    #  8 - tree    - display the complete information in an easier to read format spanning several lines.
+
+    LoadExtension = "@libdir@/freeDiameter/dbg_msg_dumps.fdx" : "0x8888";
+    LoadExtension = "@libdir@/freeDiameter/dict_rfc5777.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_mip6i.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nasreq.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nas_mipv6.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca_3gpp.fdx";
+
+
+    ##############################################################
+    ##  Peers configuration
+
+    #  The local server listens for incoming connections. By default,
+    # all unknown connecting peers are rejected. Extensions can override this behavior (e.g., acl_wl).
+    # 
+    #  In addition to incoming connections, the local peer can
+    # be configured to establish and maintain connections to some 
+    # Diameter nodes and allow connections from these nodes.
+    #  This is achieved with the ConnectPeer directive described below.
+    #
+    # Note that the configured Diameter Identity MUST match
+    # the information received inside CEA, or the connection will be aborted.
+    #
+    # Format:
+    #ConnectPeer = "diameterid" [ { parameter1; parameter2; ...} ] ;
+    # Parameters that can be specified in the peer's parameter list:
+    #  No_TCP; No_SCTP; No_IP; No_IPv6; Prefer_TCP; TLS_old_method;
+    #  No_TLS;       # assume transparent security instead of TLS. DTLS is not supported yet (will change in future versions).
+    #  Port = 5868;  # The port to connect to
+    #  TcTimer = 30;
+    #  TwTimer = 30;
+    #  ConnectTo = "202.249.37.5";
+    #  ConnectTo = "2001:200:903:2::202:1";
+    #  TLS_Prio = "NORMAL";
+    #  Realm = "realm.net"; # Reject the peer if it does not advertise this realm.
+    # Examples:
+    #ConnectPeer = "aaa.wide.ad.jp";
+    #ConnectPeer = "old.diameter.serv" { TcTimer = 60; TLS_old_method; No_SCTP; Port=3868; } ;
+    ConnectPeer = "mme.localdomain" { ConnectTo = "127.0.0.2"; No_TLS; };
+
+    ##############################################################
+ hss.key.pem: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIICXQIBAAKBgQDT57ptFGWv35DlSlNWofaJLsvuztZzn0i2lnhnp4cYuKvDCzGz
+    ApJI7UmsQMETOxNYUMwuWUTpfjECFPAYgpUQ5DeyXRQZHUuP6R9Fdc8K4I974XB7
+    q+SvK3xNfwDY68/zlqv8BE8hrdjElAUC//MSSIiezs83KeAoOTdiBe1tXQIDAQAB
+    AoGBAM7ShI2Ec/9lSInSsmaC7BpW12p87KirFZBIarpYs634SIS0v0xFvTt6hgae
+    qRO4/BedvLucG3t91B2BDBoQEaZELCjJ9kCUtzphW+u8/SUvPUCfb5xiLLeDQCVR
+    oU45JuqlF+ro9XM0x7f1REuTza1Xr20O5n5TzaCzQkdTlMdtAkEA+Yk9aS589D2c
+    TAj7H5nQMFai/z0JKM7kuBmXaqbsPtnYjdNvVYsCRPcjbhyfIjN88o/QGuUuInpb
+    PyzUZh3x2wJBANlk8d5ZVco+UE1NX0KzpEXHMY+z8kE4f8IMy0KN1V+An0ZbdxJE
+    X0aUMz9/K0+V6n0rlpY4QdOnTnbIEg2hTycCQDXBUM9lylk7JH5kuORX2Ddxkm91
+    kJGP8EmQicPZ7a6kczgqQiOlbHm625EO7WEKwnHmdSg2Ergur5VubNsKvF0CQQCc
+    sbv8rpu9qOisr2ZIZ7+yY/9/Ow8Un6rGrf4cPKtdqRIk3myXCB08fDnsPLd1J/Pa
+    wP5LzMT10BQoXdFVbb3lAkBpNXUkts8O1YxSG5zTruvygjU2n4Lova31icJ8HFaG
+    pfKHJpqDGPooupFxeCsPVPBZIRtxW70CZcr77eW/XKXv
+    -----END RSA PRIVATE KEY-----
+
+ meson.build: |
+    # Copyright (C) 2019 by Sukchan Lee <acetcom@gmail.com>
+    # This file is part of Open5GS.
+
+    # This program is free software: you can redistribute it and/or modify
+    # it under the terms of the GNU Affero General Public License as published by
+    # the Free Software Foundation, either version 3 of the License, or
+    # (at your option) any later version.
+    #
+    # This program is distributed in the hope that it will be useful,
+    # but WITHOUT ANY WARRANTY; without even the implied warranty of
+    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    # GNU General Public License for more details.
+    #
+    # You should have received a copy of the GNU General Public License
+    # along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+    freediameter_sysconfdir = join_paths(sysconfdir, 'freeDiameter')
+    meson.add_install_script(python3_exe, '-c',
+            mkdir_p.format(freediameter_sysconfdir))
+
+    freediameter_conf = '''
+        mme.conf
+        hss.conf
+        pgw.conf
+        pcrf.conf
+    '''.split()
+
+    foreach file : freediameter_conf
+        gen = configure_file(
+                input : file + '.in',
+                output : file,
+                configuration : conf_data)
+        meson.add_install_script(python3_exe, '-c',
+                install_conf.format(gen, freediameter_sysconfdir))
+    endforeach
+
+    freediameter_pem = '''
+        cacert.pem
+        mme.cert.pem
+        mme.key.pem
+        hss.cert.pem
+        hss.key.pem
+        pgw.cert.pem
+        pgw.key.pem
+        pcrf.cert.pem
+        pcrf.key.pem
+    '''.split()
+
+    foreach file : freediameter_pem
+        gen = configure_file(
+                input : file,
+                output : file,
+                configuration : conf_data)
+        meson.add_install_script(python3_exe, '-c',
+                install_conf.format(gen, freediameter_sysconfdir))
+    endforeach
+ mme.cert.pem: |
+  Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=ca.localdomain, C=KO, ST=Seoul, L=Nowon, O=Open5GS, OU=Tests
+        Validity
+            Not Before: Oct 20 06:43:58 2019 GMT
+            Not After : Oct 17 06:43:58 2029 GMT
+        Subject: C=KO, ST=Seoul, O=Open5GS, OU=Tests, CN=mme.localdomain
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (1024 bit)
+                Modulus:
+                    00:b5:3a:31:ed:bf:fe:cd:e7:50:cc:94:ba:3d:fd:
+                    2f:e6:cb:83:25:3d:82:93:26:57:b4:2f:6b:29:d9:
+                    fd:80:c8:c5:82:9c:09:17:14:38:91:57:ac:72:b0:
+                    86:d4:6f:bd:6b:fa:b9:60:51:9b:ab:6b:68:37:15:
+                    c7:de:8b:bd:e8:da:5a:49:75:03:33:09:8e:49:e4:
+                    d9:5b:3c:2f:ca:47:9b:95:d5:6f:16:e4:8d:39:b4:
+                    39:dd:51:1a:55:27:68:b9:a0:24:ad:1c:18:48:bb:
+                    49:54:ae:03:a3:0b:b8:e5:da:b4:c2:7f:09:a4:12:
+                    8e:97:08:58:24:6a:4b:f4:87
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                20:74:06:F0:AF:F6:2D:90:D1:CB:8C:5C:AB:73:D7:45:99:31:DD:AA
+            X509v3 Authority Key Identifier: 
+                keyid:C5:38:DC:BA:0F:C3:29:6E:3D:99:07:96:D0:87:12:FD:B8:48:CC:37
+
+    Signature Algorithm: sha256WithRSAEncryption
+        0a:f5:fd:1f:19:52:9a:99:ec:34:67:e8:57:dc:61:73:c0:05:
+        b0:53:e3:8f:66:86:c9:99:af:28:5a:2a:06:a8:53:b1:80:ea:
+        5c:c9:ad:93:ec:b8:b4:b0:e4:04:8b:85:1b:08:93:f2:71:b1:
+        21:ab:80:40:e4:27:c6:c5:7a:56:f2:d2:33:6c:f0:1d:f4:99:
+        85:55:60:9c:eb:d3:b8:e3:4b:e5:be:1e:d2:39:d5:55:6f:4c:
+        20:07:c8:24:1c:21:70:e4:54:17:0b:a5:66:17:be:8b:5c:73:
+        ca:5e:42:6e:27:15:18:69:dc:c6:49:97:d7:66:e0:a8:ad:9c:
+        f1:b7
+    -----BEGIN CERTIFICATE-----
+    MIICsjCCAhugAwIBAgIBATANBgkqhkiG9w0BAQsFADBoMRcwFQYDVQQDDA5jYS5s
+    b2NhbGRvbWFpbjELMAkGA1UEBhMCS08xDjAMBgNVBAgMBVNlb3VsMQ4wDAYDVQQH
+    DAVOb3dvbjEQMA4GA1UECgwHT3BlbjVHUzEOMAwGA1UECwwFVGVzdHMwHhcNMTkx
+    MDIwMDY0MzU4WhcNMjkxMDE3MDY0MzU4WjBZMQswCQYDVQQGEwJLTzEOMAwGA1UE
+    CAwFU2VvdWwxEDAOBgNVBAoMB09wZW41R1MxDjAMBgNVBAsMBVRlc3RzMRgwFgYD
+    VQQDDA9tbWUubG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGB
+    ALU6Me2//s3nUMyUuj39L+bLgyU9gpMmV7QvaynZ/YDIxYKcCRcUOJFXrHKwhtRv
+    vWv6uWBRm6traDcVx96LvejaWkl1AzMJjknk2Vs8L8pHm5XVbxbkjTm0Od1RGlUn
+    aLmgJK0cGEi7SVSuA6MLuOXatMJ/CaQSjpcIWCRqS/SHAgMBAAGjezB5MAkGA1Ud
+    EwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmlj
+    YXRlMB0GA1UdDgQWBBQgdAbwr/YtkNHLjFyrc9dFmTHdqjAfBgNVHSMEGDAWgBTF
+    ONy6D8Mpbj2ZB5bQhxL9uEjMNzANBgkqhkiG9w0BAQsFAAOBgQAK9f0fGVKamew0
+    Z+hX3GFzwAWwU+OPZobJma8oWioGqFOxgOpcya2T7Li0sOQEi4UbCJPycbEhq4BA
+    5CfGxXpW8tIzbPAd9JmFVWCc69O440vlvh7SOdVVb0wgB8gkHCFw5FQXC6VmF76L
+    XHPKXkJuJxUYadzGSZfXZuCorZzxtw==
+    -----END CERTIFICATE-----
+
+ mme.conf.in: |
+    # This is a sample configuration file for freeDiameter daemon.
+
+    # Most of the options can be omitted, as they default to reasonable values.
+    # Only TLS-related options must be configured properly in usual setups.
+
+    # It is possible to use "include" keyword to import additional files
+    # e.g.: include "/etc/freeDiameter.d/*.conf"
+    # This is exactly equivalent as copy & paste the content of the included file(s) 
+    # where the "include" keyword is found.
+
+
+    ##############################################################
+    ##  Peer identity and realm 
+
+    # The Diameter Identity of this daemon.
+    # This must be a valid FQDN that resolves to the local host.
+    # Default: hostname's FQDN
+    #Identity = "aaa.koganei.freediameter.net";
+    Identity = "mme.localdomain";
+
+    # The Diameter Realm of this daemon.
+    # Default: the domain part of Identity (after the first dot).
+    #Realm = "koganei.freediameter.net";
+    Realm = "localdomain";
+
+    ##############################################################
+    ##  Transport protocol configuration
+
+    # The port this peer is listening on for incoming connections (TCP and SCTP).
+    # Default: 3868. Use 0 to disable.
+    #Port = 3868;
+
+    # The port this peer is listening on for incoming TLS-protected connections (TCP and SCTP).
+    # See TLS_old_method for more information about TLS flavours.
+    # Note: we use TLS/SCTP instead of DTLS/SCTP at the moment. This will change in future version of freeDiameter.
+    # Default: 5868. Use 0 to disable.
+    #SecPort = 5868;
+
+    # Use RFC3588 method for TLS protection, where TLS is negociated after CER/CEA exchange is completed 
+    # on the unsecure connection. The alternative is RFC6733 mechanism, where TLS protects also the 
+    # CER/CEA exchange on a dedicated secure port.
+    # This parameter only affects outgoing connections. 
+    # The setting can be also defined per-peer (see Peers configuration section).
+    # Default: use RFC6733 method with separate port for TLS.
+    #TLS_old_method;
+
+    # Disable use of TCP protocol (only listen and connect over SCTP)
+    # Default : TCP enabled
+    #No_TCP;
+
+    # Disable use of SCTP protocol (only listen and connect over TCP)
+    # Default : SCTP enabled
+    #No_SCTP;
+    # This option is ignored if freeDiameter is compiled with DISABLE_SCTP option.
+
+    # Prefer TCP instead of SCTP for establishing new connections.
+    # This setting may be overwritten per peer in peer configuration blocs.
+    # Default : SCTP is attempted first.
+    #Prefer_TCP;
+
+    # Default number of streams per SCTP associations.
+    # This setting may be overwritten per peer basis.
+    # Default : 30 streams
+    #SCTP_streams = 30;
+
+    ##############################################################
+    ##  Endpoint configuration
+
+    # Disable use of IP addresses (only IPv6)
+    # Default : IP enabled
+    #No_IP;
+
+    # Disable use of IPv6 addresses (only IP)
+    # Default : IPv6 enabled
+    #No_IPv6;
+
+    # Specify local addresses the server must bind to
+    # Default : listen on all addresses available.
+    #ListenOn = "202.249.37.5";
+    #ListenOn = "2001:200:903:2::202:1";
+    #ListenOn = "fe80::21c:5ff:fe98:7d62%eth0";
+    ListenOn = "127.0.0.2";
+
+
+    ##############################################################
+    ##  Server configuration
+
+    # How many Diameter peers are allowed to be connecting at the same time ?
+    # This parameter limits the number of incoming connections from the time
+    # the connection is accepted until the first CER is received.
+    # Default: 5 unidentified clients in paralel.
+    #ThreadsPerServer = 5;
+
+    ##############################################################
+    ##  TLS Configuration
+
+    # TLS is managed by the GNUTLS library in the freeDiameter daemon.
+    # You may find more information about parameters and special behaviors
+    # in the relevant documentation.
+    # http://www.gnu.org/software/gnutls/manual/
+
+    # Credentials of the local peer
+    # The X509 certificate and private key file to use for the local peer.
+    # The files must contain PKCS-1 encoded RSA key, in PEM format.
+    # (These parameters are passed to gnutls_certificate_set_x509_key_file function)
+    # Default : NO DEFAULT
+    #TLS_Cred = "<x509 certif file.PEM>" , "<x509 private key file.PEM>";
+    #TLS_Cred = "/etc/ssl/certs/freeDiameter.pem", "/etc/ssl/private/freeDiameter.key";
+    TLS_Cred = "@sysconfdir@/freeDiameter/mme.cert.pem", "@sysconfdir@/freeDiameter/mme.key.pem";
+
+    # Certificate authority / trust anchors
+    # The file containing the list of trusted Certificate Authorities (PEM list)
+    # (This parameter is passed to gnutls_certificate_set_x509_trust_file function)
+    # The directive can appear several times to specify several files.
+    # Default : GNUTLS default behavior
+    #TLS_CA = "<file.PEM>";
+    TLS_CA = "@sysconfdir@/freeDiameter/cacert.pem";
+
+    # Certificate Revocation List file
+    # The information about revoked certificates.
+    # The file contains a list of trusted CRLs in PEM format. They should have been verified before. 
+    # (This parameter is passed to gnutls_certificate_set_x509_crl_file function)
+    # Note: openssl CRL format might have interoperability issue with GNUTLS format.
+    # Default : GNUTLS default behavior
+    #TLS_CRL = "<file.PEM>";
+
+    # GNU TLS Priority string
+    # This string allows to configure the behavior of GNUTLS key exchanges 
+    # algorithms. See gnutls_priority_init function documentation for information.
+    # You should also refer to the Diameter required TLS support here:
+    #   http://tools.ietf.org/html/rfc6733#section-13.1
+    # Default : "NORMAL"
+    # Example: TLS_Prio = "NONE:+VERS-TLS1.1:+AES-128-CBC:+RSA:+SHA1:+COMP-NULL";
+    #TLS_Prio = "NORMAL";
+
+    # Diffie-Hellman parameters size
+    # Set the number of bits for generated DH parameters
+    # Valid value should be 768, 1024, 2048, 3072 or 4096.
+    # (This parameter is passed to gnutls_dh_params_generate2 function, 
+    # it usually should match RSA key size)
+    # Default : 1024
+    #TLS_DH_Bits = 1024;
+
+    # Alternatively, you can specify a file to load the PKCS#3 encoded
+    # DH parameters directly from. This accelerates the daemon start 
+    # but is slightly less secure. If this file is provided, the
+    # TLS_DH_Bits parameters has no effect.
+    # Default : no default.
+    #TLS_DH_File = "<file.PEM>";
+
+
+    ##############################################################
+    ##  Timers configuration
+
+    # The Tc timer of this peer.
+    # It is the delay before a new attempt is made to reconnect a disconnected peer.
+    # The value is expressed in seconds. The recommended value is 30 seconds.
+    # Default: 30
+    #TcTimer = 30;
+
+    # The Tw timer of this peer.
+    # It is the delay before a watchdog message is sent, as described in RFC 3539.
+    # The value is expressed in seconds. The default value is 30 seconds. Value must
+    # be greater or equal to 6 seconds. See details in the RFC.
+    # Default: 30
+    #TwTimer = 30;
+
+    ##############################################################
+    ##  Applications configuration
+
+    # Disable the relaying of Diameter messages?
+    # For messages not handled locally, the default behavior is to forward the
+    # message to another peer if any is available, according to the routing 
+    # algorithms. In addition the "0xffffff" application is advertised in CER/CEA 
+    # exchanges.
+    # Default: Relaying is enabled.
+    #NoRelay;
+
+    # Number of server threads that can handle incoming messages at the same time.
+    # Default: 4
+    #AppServThreads = 4;
+
+    # Other applications are configured by loaded extensions.
+
+    ##############################################################
+    ##  Extensions configuration
+
+    #  The freeDiameter framework merely provides support for
+    # Diameter Base Protocol. The specific application behaviors,
+    # as well as advanced functions, are provided
+    # by loadable extensions (plug-ins).
+    #  These extensions may in addition receive the name of a 
+    # configuration file, the format of which is extension-specific.
+    #
+    # Format:
+    #LoadExtension = "/path/to/extension" [ : "/optional/configuration/file" ] ;
+    #
+    # Examples:
+    #LoadExtension = "extensions/sample.fdx";
+    #LoadExtension = "extensions/sample.fdx":"conf/sample.conf";
+
+    # Extensions are named as follow:
+    # dict_* for extensions that add content to the dictionary definitions.
+    # dbg_*  for extensions useful only to retrieve more information on the framework execution.
+    # acl_*  : Access control list, to control which peers are allowed to connect.
+    # rt_*   : routing extensions that impact how messages are forwarded to other peers.
+    # app_*  : applications, these extensions usually register callbacks to handle specific messages.
+    # test_* : dummy extensions that are useful only in testing environments.
+
+
+    # The dbg_msg_dump.fdx extension allows you to tweak the way freeDiameter displays some
+    # information about some events. This extension does not actually use a configuration file
+    # but receives directly a parameter in the string passed to the extension. Here are some examples:
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x1111"; # Removes all default hooks, very quiet even in case of errors.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x2222"; # Display all events with few details.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x0080"; # Dump complete information about sent and received messages.
+    # The four digits respectively control: connections, routing decisions, sent/received messages, errors.
+    # The values for each digit are:
+    #  0 - default - keep the default behavior
+    #  1 - quiet   - remove any specific log
+    #  2 - compact - display only a summary of the information
+    #  4 - full    - display the complete information on a single long line
+    #  8 - tree    - display the complete information in an easier to read format spanning several lines.
+
+    LoadExtension = "@libdir@/freeDiameter/dbg_msg_dumps.fdx" : "0x8888";
+    LoadExtension = "@libdir@/freeDiameter/dict_rfc5777.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_mip6i.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nasreq.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nas_mipv6.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca_3gpp.fdx";
+
+
+    ##############################################################
+    ##  Peers configuration
+
+    #  The local server listens for incoming connections. By default,
+    # all unknown connecting peers are rejected. Extensions can override this behavior (e.g., acl_wl).
+    # 
+    #  In addition to incoming connections, the local peer can
+    # be configured to establish and maintain connections to some 
+    # Diameter nodes and allow connections from these nodes.
+    #  This is achieved with the ConnectPeer directive described below.
+    #
+    # Note that the configured Diameter Identity MUST match
+    # the information received inside CEA, or the connection will be aborted.
+    #
+    # Format:
+    #ConnectPeer = "diameterid" [ { parameter1; parameter2; ...} ] ;
+    # Parameters that can be specified in the peer's parameter list:
+    #  No_TCP; No_SCTP; No_IP; No_IPv6; Prefer_TCP; TLS_old_method;
+    #  No_TLS;       # assume transparent security instead of TLS. DTLS is not supported yet (will change in future versions).
+    #  Port = 5868;  # The port to connect to
+    #  TcTimer = 30;
+    #  TwTimer = 30;
+    #  ConnectTo = "202.249.37.5";
+    #  ConnectTo = "2001:200:903:2::202:1";
+    #  TLS_Prio = "NORMAL";
+    #  Realm = "realm.net"; # Reject the peer if it does not advertise this realm.
+    # Examples:
+    #ConnectPeer = "aaa.wide.ad.jp";
+    #ConnectPeer = "old.diameter.serv" { TcTimer = 60; TLS_old_method; No_SCTP; Port=3868; } ;
+    ConnectPeer = "hss.localdomain" { ConnectTo = "127.0.0.4"; No_TLS; };
+
+
+    ##############################################################
+
+ mme.key.pem: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIICXQIBAAKBgQC1OjHtv/7N51DMlLo9/S/my4MlPYKTJle0L2sp2f2AyMWCnAkX
+    FDiRV6xysIbUb71r+rlgUZura2g3Fcfei73o2lpJdQMzCY5J5NlbPC/KR5uV1W8W
+    5I05tDndURpVJ2i5oCStHBhIu0lUrgOjC7jl2rTCfwmkEo6XCFgkakv0hwIDAQAB
+    AoGBALL3ID1H/8m4Z9tP+EelEzvYt8772kmUcMHYnfw7cJNQMXQUwQlQh7hIG107
+    JDr/idDrTUtn69GxhL35PWJxH3z7b9nPQCcPZQ3PZWW8lDXNqNCjV5j+2zDAXqkc
+    IyxLQuPnTyn9kcB/OIjNGrr86/6JKS1ipbT9AIllV+br5OMhAkEA7KMLbiAI03JH
+    wBhtnHdtj7NETXDnZd0Plj3ATpa7SOtxmBtqVVOH/1ghAqJ0YScrqa9+eEqcn6mv
+    sHoJ10wVVwJBAMQOdR6b6H3Swy5dZNYzSKDsWRf4cNK5Kz8HJ8UOLbHTjzcDHNsD
+    n09McdcnWgNAxV6J0YJzu4LWQjT4b1e77FECQAd+8rG+Wgk4qYUwQOif79yJdTRu
+    yyWy5vd/ZUQYCj65FpQW6jthtgEkrYcD1mPtdbieUodE9cko+uPAOeeUBWkCQQCt
+    lL9NImxtOjVkz3t/ylf7YkZfWq9JYnhPjV5AsZTzZIPgCPl7T3G1G9GO1GB1kNsu
+    IIdGIIFcDacAjxTFcLSBAkA1Bl7gARE2XZR9iVVJ/On2hWFZhtG9RId+k0pVUxKs
+    KXYnYSiD/WIeVZ6IBswqL2AnEV+kBBuZ7D9aEiDYbXQ/
+    -----END RSA PRIVATE KEY-----
+
+ pcrf.cert.pem: |
+    Certificate:
+        Data:
+            Version: 3 (0x2)
+            Serial Number: 4 (0x4)
+            Signature Algorithm: sha256WithRSAEncryption
+            Issuer: CN=ca.localdomain, C=KO, ST=Seoul, L=Nowon, O=Open5GS, OU=Tests
+            Validity
+                Not Before: Oct 20 06:43:58 2019 GMT
+                Not After : Oct 17 06:43:58 2029 GMT
+            Subject: C=KO, ST=Seoul, O=Open5GS, OU=Tests, CN=pcrf.localdomain
+            Subject Public Key Info:
+                Public Key Algorithm: rsaEncryption
+                    RSA Public-Key: (1024 bit)
+                    Modulus:
+                        00:c4:63:95:b8:b2:99:ca:4d:dd:ac:b8:e2:78:29:
+                        43:03:8a:de:6b:05:99:97:b7:90:39:f8:f6:b8:20:
+                        77:44:4b:1b:95:6c:ad:e1:5f:2c:48:a2:8a:d2:95:
+                        72:0e:f9:e1:cf:70:4e:45:6e:71:7e:2a:41:29:93:
+                        7a:12:01:73:0b:10:20:7a:38:66:9f:75:76:21:d6:
+                        7d:0c:ea:35:47:16:d6:c3:9f:41:ec:e9:98:36:16:
+                        84:9f:43:38:2b:b2:c8:d9:f3:6c:07:82:e4:ce:c8:
+                        a3:f3:c3:60:13:f3:46:44:fa:f0:ee:a9:48:40:8f:
+                        80:3e:60:73:ff:6d:59:03:2f
+                    Exponent: 65537 (0x10001)
+            X509v3 extensions:
+                X509v3 Basic Constraints: 
+                    CA:FALSE
+                Netscape Comment: 
+                    OpenSSL Generated Certificate
+                X509v3 Subject Key Identifier: 
+                    53:A8:0E:78:45:FB:38:A6:CF:30:E5:FF:BB:CA:E6:CF:A3:4A:DC:53
+                X509v3 Authority Key Identifier: 
+                    keyid:C5:38:DC:BA:0F:C3:29:6E:3D:99:07:96:D0:87:12:FD:B8:48:CC:37
+
+        Signature Algorithm: sha256WithRSAEncryption
+            47:6b:2b:f9:03:8d:c1:fd:84:21:fe:3c:5b:8c:9d:c1:48:bc:
+            ae:90:67:c5:ad:1a:80:e9:97:9c:c2:d4:31:1b:7d:4e:1a:72:
+            09:fb:92:32:b3:82:79:59:cd:92:21:27:c7:34:c3:76:27:a8:
+            11:33:cd:4a:ec:10:cb:44:89:da:47:1a:a4:6a:06:10:fb:f1:
+            6a:de:d5:1a:15:de:4a:54:6f:29:b8:de:ec:20:f2:d1:c3:0c:
+            9a:8e:97:46:8c:21:c3:63:7f:41:52:41:7e:73:47:43:0a:d1:
+            86:0b:f0:fb:9a:1f:6d:b5:93:88:95:88:84:6d:28:8e:29:2e:
+            66:9d
+    -----BEGIN CERTIFICATE-----
+    MIICszCCAhygAwIBAgIBBDANBgkqhkiG9w0BAQsFADBoMRcwFQYDVQQDDA5jYS5s
+    b2NhbGRvbWFpbjELMAkGA1UEBhMCS08xDjAMBgNVBAgMBVNlb3VsMQ4wDAYDVQQH
+    DAVOb3dvbjEQMA4GA1UECgwHT3BlbjVHUzEOMAwGA1UECwwFVGVzdHMwHhcNMTkx
+    MDIwMDY0MzU4WhcNMjkxMDE3MDY0MzU4WjBaMQswCQYDVQQGEwJLTzEOMAwGA1UE
+    CAwFU2VvdWwxEDAOBgNVBAoMB09wZW41R1MxDjAMBgNVBAsMBVRlc3RzMRkwFwYD
+    VQQDDBBwY3JmLmxvY2FsZG9tYWluMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKB
+    gQDEY5W4spnKTd2suOJ4KUMDit5rBZmXt5A5+Pa4IHdESxuVbK3hXyxIoorSlXIO
+    +eHPcE5FbnF+KkEpk3oSAXMLECB6OGafdXYh1n0M6jVHFtbDn0Hs6Zg2FoSfQzgr
+    ssjZ82wHguTOyKPzw2AT80ZE+vDuqUhAj4A+YHP/bVkDLwIDAQABo3sweTAJBgNV
+    HRMEAjAAMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZp
+    Y2F0ZTAdBgNVHQ4EFgQUU6gOeEX7OKbPMOX/u8rmz6NK3FMwHwYDVR0jBBgwFoAU
+    xTjcug/DKW49mQeW0IcS/bhIzDcwDQYJKoZIhvcNAQELBQADgYEAR2sr+QONwf2E
+    If48W4ydwUi8rpBnxa0agOmXnMLUMRt9ThpyCfuSMrOCeVnNkiEnxzTDdieoETPN
+    SuwQy0SJ2kcapGoGEPvxat7VGhXeSlRvKbje7CDy0cMMmo6XRowhw2N/QVJBfnNH
+    QwrRhgvw+5ofbbWTiJWIhG0ojikuZp0=
+    -----END CERTIFICATE-----
+
+ 
+
+ pcrf.conf.in: |
+    # This is a sample configuration file for freeDiameter daemon.
+
+    # Most of the options can be omitted, as they default to reasonable values.
+    # Only TLS-related options must be configured properly in usual setups.
+
+    # It is possible to use "include" keyword to import additional files
+    # e.g.: include "/etc/freeDiameter.d/*.conf"
+    # This is exactly equivalent as copy & paste the content of the included file(s) 
+    # where the "include" keyword is found.
+
+
+    ##############################################################
+    ##  Peer identity and realm 
+
+    # The Diameter Identity of this daemon.
+    # This must be a valid FQDN that resolves to the local host.
+    # Default: hostname's FQDN
+    #Identity = "aaa.koganei.freediameter.net";
+    Identity = "pcrf.localdomain";
+
+    # The Diameter Realm of this daemon.
+    # Default: the domain part of Identity (after the first dot).
+    #Realm = "koganei.freediameter.net";
+    Realm = "localdomain";
+
+    ##############################################################
+    ##  Transport protocol configuration
+
+    # The port this peer is listening on for incoming connections (TCP and SCTP).
+    # Default: 3868. Use 0 to disable.
+    #Port = 3868;
+
+    # The port this peer is listening on for incoming TLS-protected connections (TCP and SCTP).
+    # See TLS_old_method for more information about TLS flavours.
+    # Note: we use TLS/SCTP instead of DTLS/SCTP at the moment. This will change in future version of freeDiameter.
+    # Default: 5868. Use 0 to disable.
+    #SecPort = 5868;
+
+    # Use RFC3588 method for TLS protection, where TLS is negociated after CER/CEA exchange is completed 
+    # on the unsecure connection. The alternative is RFC6733 mechanism, where TLS protects also the 
+    # CER/CEA exchange on a dedicated secure port.
+    # This parameter only affects outgoing connections. 
+    # The setting can be also defined per-peer (see Peers configuration section).
+    # Default: use RFC6733 method with separate port for TLS.
+    #TLS_old_method;
+
+    # Disable use of TCP protocol (only listen and connect over SCTP)
+    # Default : TCP enabled
+    #No_TCP;
+
+    # Disable use of SCTP protocol (only listen and connect over TCP)
+    # Default : SCTP enabled
+    #No_SCTP;
+    # This option is ignored if freeDiameter is compiled with DISABLE_SCTP option.
+
+    # Prefer TCP instead of SCTP for establishing new connections.
+    # This setting may be overwritten per peer in peer configuration blocs.
+    # Default : SCTP is attempted first.
+    #Prefer_TCP;
+
+    # Default number of streams per SCTP associations.
+    # This setting may be overwritten per peer basis.
+    # Default : 30 streams
+    #SCTP_streams = 30;
+
+    ##############################################################
+    ##  Endpoint configuration
+
+    # Disable use of IP addresses (only IPv6)
+    # Default : IP enabled
+    #No_IP;
+
+    # Disable use of IPv6 addresses (only IP)
+    # Default : IPv6 enabled
+    #No_IPv6;
+
+    # Specify local addresses the server must bind to
+    # Default : listen on all addresses available.
+    #ListenOn = "202.249.37.5";
+    #ListenOn = "2001:200:903:2::202:1";
+    #ListenOn = "fe80::21c:5ff:fe98:7d62%eth0";
+    ListenOn = "127.0.0.5";
+
+
+    ##############################################################
+    ##  Server configuration
+
+    # How many Diameter peers are allowed to be connecting at the same time ?
+    # This parameter limits the number of incoming connections from the time
+    # the connection is accepted until the first CER is received.
+    # Default: 5 unidentified clients in paralel.
+    #ThreadsPerServer = 5;
+
+    ##############################################################
+    ##  TLS Configuration
+
+    # TLS is managed by the GNUTLS library in the freeDiameter daemon.
+    # You may find more information about parameters and special behaviors
+    # in the relevant documentation.
+    # http://www.gnu.org/software/gnutls/manual/
+
+    # Credentials of the local peer
+    # The X509 certificate and private key file to use for the local peer.
+    # The files must contain PKCS-1 encoded RSA key, in PEM format.
+    # (These parameters are passed to gnutls_certificate_set_x509_key_file function)
+    # Default : NO DEFAULT
+    #TLS_Cred = "<x509 certif file.PEM>" , "<x509 private key file.PEM>";
+    #TLS_Cred = "/etc/ssl/certs/freeDiameter.pem", "/etc/ssl/private/freeDiameter.key";
+    TLS_Cred = "@sysconfdir@/freeDiameter/pcrf.cert.pem", "@sysconfdir@/freeDiameter/pcrf.key.pem";
+
+    # Certificate authority / trust anchors
+    # The file containing the list of trusted Certificate Authorities (PEM list)
+    # (This parameter is passed to gnutls_certificate_set_x509_trust_file function)
+    # The directive can appear several times to specify several files.
+    # Default : GNUTLS default behavior
+    #TLS_CA = "<file.PEM>";
+    TLS_CA = "@sysconfdir@/freeDiameter/cacert.pem";
+
+    # Certificate Revocation List file
+    # The information about revoked certificates.
+    # The file contains a list of trusted CRLs in PEM format. They should have been verified before. 
+    # (This parameter is passed to gnutls_certificate_set_x509_crl_file function)
+    # Note: openssl CRL format might have interoperability issue with GNUTLS format.
+    # Default : GNUTLS default behavior
+    #TLS_CRL = "<file.PEM>";
+
+    # GNU TLS Priority string
+    # This string allows to configure the behavior of GNUTLS key exchanges 
+    # algorithms. See gnutls_priority_init function documentation for information.
+    # You should also refer to the Diameter required TLS support here:
+    #   http://tools.ietf.org/html/rfc6733#section-13.1
+    # Default : "NORMAL"
+    # Example: TLS_Prio = "NONE:+VERS-TLS1.1:+AES-128-CBC:+RSA:+SHA1:+COMP-NULL";
+    #TLS_Prio = "NORMAL";
+
+    # Diffie-Hellman parameters size
+    # Set the number of bits for generated DH parameters
+    # Valid value should be 768, 1024, 2048, 3072 or 4096.
+    # (This parameter is passed to gnutls_dh_params_generate2 function, 
+    # it usually should match RSA key size)
+    # Default : 1024
+    #TLS_DH_Bits = 1024;
+
+    # Alternatively, you can specify a file to load the PKCS#3 encoded
+    # DH parameters directly from. This accelerates the daemon start 
+    # but is slightly less secure. If this file is provided, the
+    # TLS_DH_Bits parameters has no effect.
+    # Default : no default.
+    #TLS_DH_File = "<file.PEM>";
+
+
+    ##############################################################
+    ##  Timers configuration
+
+    # The Tc timer of this peer.
+    # It is the delay before a new attempt is made to reconnect a disconnected peer.
+    # The value is expressed in seconds. The recommended value is 30 seconds.
+    # Default: 30
+    #TcTimer = 30;
+
+    # The Tw timer of this peer.
+    # It is the delay before a watchdog message is sent, as described in RFC 3539.
+    # The value is expressed in seconds. The default value is 30 seconds. Value must
+    # be greater or equal to 6 seconds. See details in the RFC.
+    # Default: 30
+    #TwTimer = 30;
+
+    ##############################################################
+    ##  Applications configuration
+
+    # Disable the relaying of Diameter messages?
+    # For messages not handled locally, the default behavior is to forward the
+    # message to another peer if any is available, according to the routing 
+    # algorithms. In addition the "0xffffff" application is advertised in CER/CEA 
+    # exchanges.
+    # Default: Relaying is enabled.
+    #NoRelay;
+
+    # Number of server threads that can handle incoming messages at the same time.
+    # Default: 4
+    #AppServThreads = 4;
+
+    # Other applications are configured by loaded extensions.
+
+    ##############################################################
+    ##  Extensions configuration
+
+    #  The freeDiameter framework merely provides support for
+    # Diameter Base Protocol. The specific application behaviors,
+    # as well as advanced functions, are provided
+    # by loadable extensions (plug-ins).
+    #  These extensions may in addition receive the name of a 
+    # configuration file, the format of which is extension-specific.
+    #
+    # Format:
+    #LoadExtension = "/path/to/extension" [ : "/optional/configuration/file" ] ;
+    #
+    # Examples:
+    #LoadExtension = "extensions/sample.fdx";
+    #LoadExtension = "extensions/sample.fdx":"conf/sample.conf";
+
+    # Extensions are named as follow:
+    # dict_* for extensions that add content to the dictionary definitions.
+    # dbg_*  for extensions useful only to retrieve more information on the framework execution.
+    # acl_*  : Access control list, to control which peers are allowed to connect.
+    # rt_*   : routing extensions that impact how messages are forwarded to other peers.
+    # app_*  : applications, these extensions usually register callbacks to handle specific messages.
+    # test_* : dummy extensions that are useful only in testing environments.
+
+
+    # The dbg_msg_dump.fdx extension allows you to tweak the way freeDiameter displays some
+    # information about some events. This extension does not actually use a configuration file
+    # but receives directly a parameter in the string passed to the extension. Here are some examples:
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x1111"; # Removes all default hooks, very quiet even in case of errors.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x2222"; # Display all events with few details.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x0080"; # Dump complete information about sent and received messages.
+    # The four digits respectively control: connections, routing decisions, sent/received messages, errors.
+    # The values for each digit are:
+    #  0 - default - keep the default behavior
+    #  1 - quiet   - remove any specific log
+    #  2 - compact - display only a summary of the information
+    #  4 - full    - display the complete information on a single long line
+    #  8 - tree    - display the complete information in an easier to read format spanning several lines.
+
+    LoadExtension = "@libdir@/freeDiameter/dbg_msg_dumps.fdx" : "0x8888";
+    LoadExtension = "@libdir@/freeDiameter/dict_rfc5777.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_mip6i.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nasreq.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nas_mipv6.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca_3gpp.fdx";
+
+
+    ##############################################################
+    ##  Peers configuration
+
+    #  The local server listens for incoming connections. By default,
+    # all unknown connecting peers are rejected. Extensions can override this behavior (e.g., acl_wl).
+    # 
+    #  In addition to incoming connections, the local peer can
+    # be configured to establish and maintain connections to some 
+    # Diameter nodes and allow connections from these nodes.
+    #  This is achieved with the ConnectPeer directive described below.
+    #
+    # Note that the configured Diameter Identity MUST match
+    # the information received inside CEA, or the connection will be aborted.
+    #
+    # Format:
+    #ConnectPeer = "diameterid" [ { parameter1; parameter2; ...} ] ;
+    # Parameters that can be specified in the peer's parameter list:
+    #  No_TCP; No_SCTP; No_IP; No_IPv6; Prefer_TCP; TLS_old_method;
+    #  No_TLS;       # assume transparent security instead of TLS. DTLS is not supported yet (will change in future versions).
+    #  Port = 5868;  # The port to connect to
+    #  TcTimer = 30;
+    #  TwTimer = 30;
+    #  ConnectTo = "202.249.37.5";
+    #  ConnectTo = "2001:200:903:2::202:1";
+    #  TLS_Prio = "NORMAL";
+    #  Realm = "realm.net"; # Reject the peer if it does not advertise this realm.
+    # Examples:
+    #ConnectPeer = "aaa.wide.ad.jp";
+    #ConnectPeer = "old.diameter.serv" { TcTimer = 60; TLS_old_method; No_SCTP; Port=3868; } ;
+    ConnectPeer = "pgw.localdomain" { ConnectTo = "127.0.0.3"; No_TLS; };
+
+    ##############################################################
+
+ pcrf.key.pem: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIICXQIBAAKBgQDEY5W4spnKTd2suOJ4KUMDit5rBZmXt5A5+Pa4IHdESxuVbK3h
+    XyxIoorSlXIO+eHPcE5FbnF+KkEpk3oSAXMLECB6OGafdXYh1n0M6jVHFtbDn0Hs
+    6Zg2FoSfQzgrssjZ82wHguTOyKPzw2AT80ZE+vDuqUhAj4A+YHP/bVkDLwIDAQAB
+    AoGBAJG6b+RhK3uSMjcz7mFKBP9A8fCqdCG/xdcu5i0VcksMDMjhn1mIXPz9GFRR
+    LxTr2eMrK/mbjb4YLshiNgfcaXdzpZGauK15PNEHemygI4et9b0iE3ZfGM3dGEGi
+    UmWzXgO347S8CNmm6JX/gtAaCafeapmyms6E4teYFp1UMRIBAkEA7zrq9HZT1CZu
+    fWN9DraOUVrgMdV8Q/qdKzAqMsTf95r43aRxxe8ZkXpQuf1X0kBDH8cIeOAVu96/
+    hmfxCcVZAQJBANIn3YU7xCnUbdK29tYuxAzEw7j4pdfjHEPgkvjV1xsGVwM+DQkF
+    /yrSgAujxR70uGfBcUF/M9XRniBWg+FRrC8CQBXJ5vZnBJGRAoU3F3/Mjr/IKB1B
+    1XSXkdMKKv2+wqtZmQsO3DHr6gc+/bVC5snGgpaVWScxOamHyyfhtalvKQECQG+w
+    PCyo3NIWUd+g2YJvDEZ09EgD7a/UxZrVaYbRryZvsiLJAYiAJWKOyPpmqUaQbMjH
+    p/dVMSk75Dvvfttq2oUCQQDuEO0xY0gHxzFYH1K82Yw5aDdRsryEQYpb5e+jduH1
+    EHACfc2H4Oc3/a39q7On+HnZgxK7gFMpGW+D0MdDDoL6
+    -----END RSA PRIVATE KEY-----
+
+ pgw.cert.pem: |
+    Certificate:
+        Data:
+            Version: 3 (0x2)
+            Serial Number: 3 (0x3)
+            Signature Algorithm: sha256WithRSAEncryption
+            Issuer: CN=ca.localdomain, C=KO, ST=Seoul, L=Nowon, O=Open5GS, OU=Tests
+            Validity
+                Not Before: Oct 20 06:43:58 2019 GMT
+                Not After : Oct 17 06:43:58 2029 GMT
+            Subject: C=KO, ST=Seoul, O=Open5GS, OU=Tests, CN=pgw.localdomain
+            Subject Public Key Info:
+                Public Key Algorithm: rsaEncryption
+                    RSA Public-Key: (1024 bit)
+                    Modulus:
+                        00:bf:bc:94:38:f4:03:a5:23:8c:21:ba:4e:5e:51:
+                        f7:76:f5:e1:1e:43:fc:04:a0:f9:b9:9f:47:dd:d3:
+                        b5:aa:83:e8:cb:d0:3c:56:0e:4d:fd:de:b6:93:fa:
+                        eb:a3:94:4a:79:68:1d:84:61:cf:b7:d0:ac:d0:41:
+                        ef:66:e0:8a:40:ec:b4:d2:5b:ce:cc:2c:cd:7d:7e:
+                        87:73:b0:4b:4d:79:54:3b:a4:48:bb:19:4f:9f:7e:
+                        30:e7:af:17:32:a3:95:af:c4:a5:19:8f:53:3c:16:
+                        cd:54:9d:38:98:2b:0f:b7:cd:33:91:f0:ef:b8:d2:
+                        9f:0e:fe:8e:77:9d:e8:ba:f3
+                    Exponent: 65537 (0x10001)
+            X509v3 extensions:
+                X509v3 Basic Constraints: 
+                    CA:FALSE
+                Netscape Comment: 
+                    OpenSSL Generated Certificate
+                X509v3 Subject Key Identifier: 
+                    EB:F6:EA:D3:F2:F2:C6:C6:83:EF:13:CD:AF:49:A8:ED:03:DF:7F:ED
+                X509v3 Authority Key Identifier: 
+                    keyid:C5:38:DC:BA:0F:C3:29:6E:3D:99:07:96:D0:87:12:FD:B8:48:CC:37
+
+        Signature Algorithm: sha256WithRSAEncryption
+            3b:00:ef:c4:9f:69:c3:22:06:76:6f:70:88:50:1c:f3:a2:9a:
+            68:00:34:fa:3a:68:b2:94:fe:7c:31:7d:4e:95:bd:47:4d:69:
+            1f:76:32:64:83:1b:5b:11:71:bb:0a:7a:af:72:54:7a:dc:30:
+            51:e5:93:27:8c:8a:51:e6:e5:15:53:70:14:85:3b:77:1a:87:
+            ce:d0:6f:31:07:5d:14:30:d7:de:a0:b5:a7:a1:96:18:1a:fd:
+            ea:9f:c2:ea:bb:72:52:84:b6:57:6d:70:93:35:64:d3:8b:82:
+            1b:7b:ea:85:8a:fb:c6:b3:e0:66:ad:db:11:dd:5e:6e:22:dd:
+            b4:23
+    -----BEGIN CERTIFICATE-----
+    MIICsjCCAhugAwIBAgIBAzANBgkqhkiG9w0BAQsFADBoMRcwFQYDVQQDDA5jYS5s
+    b2NhbGRvbWFpbjELMAkGA1UEBhMCS08xDjAMBgNVBAgMBVNlb3VsMQ4wDAYDVQQH
+    DAVOb3dvbjEQMA4GA1UECgwHT3BlbjVHUzEOMAwGA1UECwwFVGVzdHMwHhcNMTkx
+    MDIwMDY0MzU4WhcNMjkxMDE3MDY0MzU4WjBZMQswCQYDVQQGEwJLTzEOMAwGA1UE
+    CAwFU2VvdWwxEDAOBgNVBAoMB09wZW41R1MxDjAMBgNVBAsMBVRlc3RzMRgwFgYD
+    VQQDDA9wZ3cubG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGB
+    AL+8lDj0A6UjjCG6Tl5R93b14R5D/ASg+bmfR93TtaqD6MvQPFYOTf3etpP666OU
+    SnloHYRhz7fQrNBB72bgikDstNJbzswszX1+h3OwS015VDukSLsZT59+MOevFzKj
+    la/EpRmPUzwWzVSdOJgrD7fNM5Hw77jSnw7+jned6LrzAgMBAAGjezB5MAkGA1Ud
+    EwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmlj
+    YXRlMB0GA1UdDgQWBBTr9urT8vLGxoPvE82vSajtA99/7TAfBgNVHSMEGDAWgBTF
+    ONy6D8Mpbj2ZB5bQhxL9uEjMNzANBgkqhkiG9w0BAQsFAAOBgQA7AO/En2nDIgZ2
+    b3CIUBzzoppoADT6OmiylP58MX1Olb1HTWkfdjJkgxtbEXG7CnqvclR63DBR5ZMn
+    jIpR5uUVU3AUhTt3GofO0G8xB10UMNfeoLWnoZYYGv3qn8Lqu3JShLZXbXCTNWTT
+    i4Ibe+qFivvGs+BmrdsR3V5uIt20Iw==
+    -----END CERTIFICATE-----
+
+ pgw.conf.in: |
+    # This is a sample configuration file for freeDiameter daemon.
+
+    # Most of the options can be omitted, as they default to reasonable values.
+    # Only TLS-related options must be configured properly in usual setups.
+
+    # It is possible to use "include" keyword to import additional files
+    # e.g.: include "/etc/freeDiameter.d/*.conf"
+    # This is exactly equivalent as copy & paste the content of the included file(s) 
+    # where the "include" keyword is found.
+
+
+    ##############################################################
+    ##  Peer identity and realm 
+
+    # The Diameter Identity of this daemon.
+    # This must be a valid FQDN that resolves to the local host.
+    # Default: hostname's FQDN
+    #Identity = "aaa.koganei.freediameter.net";
+    Identity = "pgw.localdomain";
+
+    # The Diameter Realm of this daemon.
+    # Default: the domain part of Identity (after the first dot).
+    #Realm = "koganei.freediameter.net";
+    Realm = "localdomain";
+
+    ##############################################################
+    ##  Transport protocol configuration
+
+    # The port this peer is listening on for incoming connections (TCP and SCTP).
+    # Default: 3868. Use 0 to disable.
+    #Port = 3868;
+
+    # The port this peer is listening on for incoming TLS-protected connections (TCP and SCTP).
+    # See TLS_old_method for more information about TLS flavours.
+    # Note: we use TLS/SCTP instead of DTLS/SCTP at the moment. This will change in future version of freeDiameter.
+    # Default: 5868. Use 0 to disable.
+    #SecPort = 5868;
+
+    # Use RFC3588 method for TLS protection, where TLS is negociated after CER/CEA exchange is completed 
+    # on the unsecure connection. The alternative is RFC6733 mechanism, where TLS protects also the 
+    # CER/CEA exchange on a dedicated secure port.
+    # This parameter only affects outgoing connections. 
+    # The setting can be also defined per-peer (see Peers configuration section).
+    # Default: use RFC6733 method with separate port for TLS.
+    #TLS_old_method;
+
+    # Disable use of TCP protocol (only listen and connect over SCTP)
+    # Default : TCP enabled
+    #No_TCP;
+
+    # Disable use of SCTP protocol (only listen and connect over TCP)
+    # Default : SCTP enabled
+    #No_SCTP;
+    # This option is ignored if freeDiameter is compiled with DISABLE_SCTP option.
+
+    # Prefer TCP instead of SCTP for establishing new connections.
+    # This setting may be overwritten per peer in peer configuration blocs.
+    # Default : SCTP is attempted first.
+    #Prefer_TCP;
+
+    # Default number of streams per SCTP associations.
+    # This setting may be overwritten per peer basis.
+    # Default : 30 streams
+    #SCTP_streams = 30;
+
+    ##############################################################
+    ##  Endpoint configuration
+
+    # Disable use of IP addresses (only IPv6)
+    # Default : IP enabled
+    #No_IP;
+
+    # Disable use of IPv6 addresses (only IP)
+    # Default : IPv6 enabled
+    #No_IPv6;
+
+    # Specify local addresses the server must bind to
+    # Default : listen on all addresses available.
+    #ListenOn = "202.249.37.5";
+    #ListenOn = "2001:200:903:2::202:1";
+    #ListenOn = "fe80::21c:5ff:fe98:7d62%eth0";
+    ListenOn = "127.0.0.3";
+
+
+    ##############################################################
+    ##  Server configuration
+
+    # How many Diameter peers are allowed to be connecting at the same time ?
+    # This parameter limits the number of incoming connections from the time
+    # the connection is accepted until the first CER is received.
+    # Default: 5 unidentified clients in paralel.
+    #ThreadsPerServer = 5;
+
+    ##############################################################
+    ##  TLS Configuration
+
+    # TLS is managed by the GNUTLS library in the freeDiameter daemon.
+    # You may find more information about parameters and special behaviors
+    # in the relevant documentation.
+    # http://www.gnu.org/software/gnutls/manual/
+
+    # Credentials of the local peer
+    # The X509 certificate and private key file to use for the local peer.
+    # The files must contain PKCS-1 encoded RSA key, in PEM format.
+    # (These parameters are passed to gnutls_certificate_set_x509_key_file function)
+    # Default : NO DEFAULT
+    #TLS_Cred = "<x509 certif file.PEM>" , "<x509 private key file.PEM>";
+    #TLS_Cred = "/etc/ssl/certs/freeDiameter.pem", "/etc/ssl/private/freeDiameter.key";
+    TLS_Cred = "@sysconfdir@/freeDiameter/pgw.cert.pem", "@sysconfdir@/freeDiameter/pgw.key.pem";
+
+    # Certificate authority / trust anchors
+    # The file containing the list of trusted Certificate Authorities (PEM list)
+    # (This parameter is passed to gnutls_certificate_set_x509_trust_file function)
+    # The directive can appear several times to specify several files.
+    # Default : GNUTLS default behavior
+    #TLS_CA = "<file.PEM>";
+    TLS_CA = "@sysconfdir@/freeDiameter/cacert.pem";
+
+    # Certificate Revocation List file
+    # The information about revoked certificates.
+    # The file contains a list of trusted CRLs in PEM format. They should have been verified before. 
+    # (This parameter is passed to gnutls_certificate_set_x509_crl_file function)
+    # Note: openssl CRL format might have interoperability issue with GNUTLS format.
+    # Default : GNUTLS default behavior
+    #TLS_CRL = "<file.PEM>";
+
+    # GNU TLS Priority string
+    # This string allows to configure the behavior of GNUTLS key exchanges 
+    # algorithms. See gnutls_priority_init function documentation for information.
+    # You should also refer to the Diameter required TLS support here:
+    #   http://tools.ietf.org/html/rfc6733#section-13.1
+    # Default : "NORMAL"
+    # Example: TLS_Prio = "NONE:+VERS-TLS1.1:+AES-128-CBC:+RSA:+SHA1:+COMP-NULL";
+    #TLS_Prio = "NORMAL";
+
+    # Diffie-Hellman parameters size
+    # Set the number of bits for generated DH parameters
+    # Valid value should be 768, 1024, 2048, 3072 or 4096.
+    # (This parameter is passed to gnutls_dh_params_generate2 function, 
+    # it usually should match RSA key size)
+    # Default : 1024
+    #TLS_DH_Bits = 1024;
+
+    # Alternatively, you can specify a file to load the PKCS#3 encoded
+    # DH parameters directly from. This accelerates the daemon start 
+    # but is slightly less secure. If this file is provided, the
+    # TLS_DH_Bits parameters has no effect.
+    # Default : no default.
+    #TLS_DH_File = "<file.PEM>";
+
+
+    ##############################################################
+    ##  Timers configuration
+
+    # The Tc timer of this peer.
+    # It is the delay before a new attempt is made to reconnect a disconnected peer.
+    # The value is expressed in seconds. The recommended value is 30 seconds.
+    # Default: 30
+    #TcTimer = 30;
+
+    # The Tw timer of this peer.
+    # It is the delay before a watchdog message is sent, as described in RFC 3539.
+    # The value is expressed in seconds. The default value is 30 seconds. Value must
+    # be greater or equal to 6 seconds. See details in the RFC.
+    # Default: 30
+    #TwTimer = 30;
+
+    ##############################################################
+    ##  Applications configuration
+
+    # Disable the relaying of Diameter messages?
+    # For messages not handled locally, the default behavior is to forward the
+    # message to another peer if any is available, according to the routing 
+    # algorithms. In addition the "0xffffff" application is advertised in CER/CEA 
+    # exchanges.
+    # Default: Relaying is enabled.
+    #NoRelay;
+
+    # Number of server threads that can handle incoming messages at the same time.
+    # Default: 4
+    #AppServThreads = 4;
+
+    # Other applications are configured by loaded extensions.
+
+    ##############################################################
+    ##  Extensions configuration
+
+    #  The freeDiameter framework merely provides support for
+    # Diameter Base Protocol. The specific application behaviors,
+    # as well as advanced functions, are provided
+    # by loadable extensions (plug-ins).
+    #  These extensions may in addition receive the name of a 
+    # configuration file, the format of which is extension-specific.
+    #
+    # Format:
+    #LoadExtension = "/path/to/extension" [ : "/optional/configuration/file" ] ;
+    #
+    # Examples:
+    #LoadExtension = "extensions/sample.fdx";
+    #LoadExtension = "extensions/sample.fdx":"conf/sample.conf";
+
+    # Extensions are named as follow:
+    # dict_* for extensions that add content to the dictionary definitions.
+    # dbg_*  for extensions useful only to retrieve more information on the framework execution.
+    # acl_*  : Access control list, to control which peers are allowed to connect.
+    # rt_*   : routing extensions that impact how messages are forwarded to other peers.
+    # app_*  : applications, these extensions usually register callbacks to handle specific messages.
+    # test_* : dummy extensions that are useful only in testing environments.
+
+
+    # The dbg_msg_dump.fdx extension allows you to tweak the way freeDiameter displays some
+    # information about some events. This extension does not actually use a configuration file
+    # but receives directly a parameter in the string passed to the extension. Here are some examples:
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x1111"; # Removes all default hooks, very quiet even in case of errors.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x2222"; # Display all events with few details.
+    ## LoadExtension = "dbg_msg_dumps.fdx" : "0x0080"; # Dump complete information about sent and received messages.
+    # The four digits respectively control: connections, routing decisions, sent/received messages, errors.
+    # The values for each digit are:
+    #  0 - default - keep the default behavior
+    #  1 - quiet   - remove any specific log
+    #  2 - compact - display only a summary of the information
+    #  4 - full    - display the complete information on a single long line
+    #  8 - tree    - display the complete information in an easier to read format spanning several lines.
+
+    LoadExtension = "@libdir@/freeDiameter/dbg_msg_dumps.fdx" : "0x8888";
+    LoadExtension = "@libdir@/freeDiameter/dict_rfc5777.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_mip6i.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nasreq.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_nas_mipv6.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca.fdx";
+    LoadExtension = "@libdir@/freeDiameter/dict_dcca_3gpp.fdx";
+
+
+    ##############################################################
+    ##  Peers configuration
+
+    #  The local server listens for incoming connections. By default,
+    # all unknown connecting peers are rejected. Extensions can override this behavior (e.g., acl_wl).
+    # 
+    #  In addition to incoming connections, the local peer can
+    # be configured to establish and maintain connections to some 
+    # Diameter nodes and allow connections from these nodes.
+    #  This is achieved with the ConnectPeer directive described below.
+    #
+    # Note that the configured Diameter Identity MUST match
+    # the information received inside CEA, or the connection will be aborted.
+    #
+    # Format:
+    #ConnectPeer = "diameterid" [ { parameter1; parameter2; ...} ] ;
+    # Parameters that can be specified in the peer's parameter list:
+    #  No_TCP; No_SCTP; No_IP; No_IPv6; Prefer_TCP; TLS_old_method;
+    #  No_TLS;       # assume transparent security instead of TLS. DTLS is not supported yet (will change in future versions).
+    #  Port = 5868;  # The port to connect to
+    #  TcTimer = 30;
+    #  TwTimer = 30;
+    #  ConnectTo = "202.249.37.5";
+    #  ConnectTo = "2001:200:903:2::202:1";
+    #  TLS_Prio = "NORMAL";
+    #  Realm = "realm.net"; # Reject the peer if it does not advertise this realm.
+    # Examples:
+    #ConnectPeer = "aaa.wide.ad.jp";
+    #ConnectPeer = "old.diameter.serv" { TcTimer = 60; TLS_old_method; No_SCTP; Port=3868; } ;
+    ConnectPeer = "pcrf.localdomain" { ConnectTo = "127.0.0.5"; No_TLS; };
+    ##############################################################
+
+ pgw.key.pem: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIICXAIBAAKBgQC/vJQ49AOlI4whuk5eUfd29eEeQ/wEoPm5n0fd07Wqg+jL0DxW
+    Dk393raT+uujlEp5aB2EYc+30KzQQe9m4IpA7LTSW87MLM19fodzsEtNeVQ7pEi7
+    GU+ffjDnrxcyo5WvxKUZj1M8Fs1UnTiYKw+3zTOR8O+40p8O/o53nei68wIDAQAB
+    AoGAarZPHH+aw79MD718PnyKKVhhqZGW4xCgzFG9EtXwpu1xlHXaDt85QxFANo4R
+    teIjrPxoaTRzAlAOzn3T+0L/TnhU67WUOvSQEhGzS1liNNw024NekOy3rrqAvB3D
+    esmOtR5+LtadCb2CuJdL0XALUp+F/g25CoryXsKMIg4Eg9ECQQD9fbT7n3GurBlF
+    s1E+Ah1+fpD2qOvyFrK4Yzs/CYn5s1yEO0AMwLavO71Y+SIGzFnuIASbyEX4Adl/
+    hxSvDp5ZAkEAwaJmOzgLsLvSf5RkYzaX+/IO/DBYowDknalMobDplaOlK5LLFNiM
+    naEH6A6UV981OnIr6ScU8knC0HyDmmTyKwJAfu3jIdvE4OHsBaq0k4gbnKtjix8q
+    hh43f3ywve/Y1t+pA81nVPtqfnQ7a8HT9/N7VHFT3W17G6RRdDn/cWiwgQJAOuD+
+    5RLtuxfhshmVTPXU0S+Rju3EhgxHeAl628/Ht1DDcLR6PCR83ZGRreaBBRdCQDtn
+    TsYrgGEdc/forJH1cQJBAMzBcACt51/OuHtPF+kxeRqgLINji82EQOGmZBvtWySI
+    cRFndLh6N8OOkDnP2MwGY7j0jWveKE8mVA12ymMWZuU=
+    -----END RSA PRIVATE KEY-----
