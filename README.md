@@ -1,5 +1,5 @@
-# open5gcore-helm-chart
-This is the home of open5gcore helm chart
+# open5gs-helm-chart
+This is the home of open5gs helm chart
 
 ## THIS IS A WIP CHART
 
