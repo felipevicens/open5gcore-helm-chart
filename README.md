@@ -1,3 +1,4 @@
+```yaml
 apiVersion: v1
 entries:
   open5gs:
@@ -8,6 +9,7 @@ entries:
     digest: b0b5be183252d9995b3d0e09bb28aa45823d5ac35b96a4695c2e917e44c3f9a5
     name: open5gs
     urls:
-    - https://felipevicens.github.io/open5gs-helm-chart/open5gs-0.1.0.tgz
+    - https://felipevicens.github.io/open5gcore-helm-chart/open5gs-0.1.0.tgz
     version: 0.1.0
 generated: 2020-03-02T09:45:46.904388848+01:00
+```
