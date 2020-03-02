@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-sgw-config
-  namespace: open5gs
+  namespace: {{ .Values.namespace }}
   labels:
     epc-mode: sgw
 data:
